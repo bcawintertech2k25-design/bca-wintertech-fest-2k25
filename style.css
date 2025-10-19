@@ -1,0 +1,476 @@
+/* 🌈 Modern Website Design CSS - Upgraded with Animations */
+
+/* === COLOR VARIABLES === */
+:root {
+  --accent: #6d28d9;          /* Deep Purple */
+  --accent-light: #8b5cf6;    /* Neon Purple */
+  --bg-dark: #0f172a;         /* Midnight Navy */
+  --bg-light: #f8fafc;
+  --text-light: #e2e8f0;
+  --text-dark: #111827;
+  --gradient: linear-gradient(135deg, #6d28d9, #3b82f6); /* Purple → Blue */
+  --shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+/* === BASIC RESET === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", system-ui, sans-serif;
+  color: var(--text-dark);
+  background-color: #e7f0f8;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Navbar links basic style */
+.navbar-nav .nav-link {
+  position: relative;
+  color: #111827;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect: underline slide + gradient text */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+}
+
+/* Hover effect: text color gradient */
+.navbar-nav .nav-link:hover {
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Optional: slight pop on hover */
+.navbar-nav .nav-link:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease, background 0.4s ease;
+}
+/* Hero Text Container */
+.hero-title {
+  text-align: left;
+  overflow: hidden;
+}
+
+/* Main Title Animation */
+.main-title {
+  font-weight: 700;
+  font-size: 2rem;
+  background: linear-gradient(90deg, #4f46e5, #6366f1, #4f46e5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: slideFade 1.2s ease forwards, gradientShift 3s infinite linear;
+  opacity: 0;
+}
+
+/* Subtitle Animation */
+.subtitle {
+  display: block;
+  color: #6b7280;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+  opacity: 0;
+  animation: fadeUp 1.2s ease forwards;
+  animation-delay: 0.5s;
+}
+
+/* Keyframes */
+@keyframes slideFade {
+  0% { transform: translateY(40px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeUp {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* === HERO SECTION === */
+.hero {
+  background: var(--gradient);
+  color: rgb(255, 255, 255);
+  padding: 5rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero h1 {
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.hero p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.hero .btn {
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 0.75rem 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero .btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(79, 70, 229, 0.7);
+}
+
+/* === SECTION TITLES === */
+h2.section-title {
+  font-weight: 700;
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+h2.section-title::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: var(--accent);
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  border-radius: 2px;
+}
+
+/* === EVENT CARDS === */
+.event-card {
+  border: none;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  background: #fff;
+}
+
+.event-card:hover {
+  transform: translateY(-10px) rotateX(3deg) rotateY(2deg);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+/* Gaming card hover pop-up */
+#gaming .card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#gaming .card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* Free Fire / Gaming Register Button */
+#gaming .btn {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+#gaming .btn:hover {
+  transform: scale(1.1) translateY(-3px);
+  box-shadow: 0 8px 25px rgba(13, 2, 70, 0.5);
+  background: linear-gradient(135deg, #d1cfdb, #5777ce);
+}
+
+
+/* === BADGES === */
+.badge-accent {
+  display: inline-block;
+  background: var(--gradient);
+  box-shadow: 0 4px 10px rgba(79, 70, 229, 0.4);
+  color: white;
+  animation: float 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+  from { transform: translateY(0); }
+  to { transform: translateY(-8px); }
+}
+/* === 🌀 PRO TEAM PHOTO ANIMATION === */
+.team-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent-light);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(79, 70, 229, 0.25);
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+/* hover zoom + rotate + glow */
+.team-photo:hover {
+  transform: scale(1.2) rotate(3deg);
+  box-shadow: 0 0 40px rgba(99, 102, 241, 0.6);
+}
+
+/* animated light reflection on hover */
+.team-photo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.3), rgba(255,255,255,0));
+  transform: skewX(-25deg);
+  transition: left 0.75s ease;
+}
+
+/* shine moves across on hover */
+.team-photo:hover::after {
+  left: 130%;
+}
+
+
+/* === GALLERY === */
+.carousel-inner img {
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+}
+
+.carousel-inner img:hover {
+  transform: scale(1.02);
+}
+
+/* === FOOTER === */
+footer {
+  background: #0f172a;
+  color: #cbd5e1;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+footer a {
+  color: var(--accent-light);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* === BUTTONS === */
+.btn-primary-custom {
+  background: var(--gradient);
+  border: none;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(79,70,229,0.7);
+  background: linear-gradient(135deg, #4338ca, #6366f1);
+}
+
+/* === ANIMATIONS === */
+.fade-in {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Slide Up Animation */
+.animate-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUp 0.8s forwards;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === RESPONSIVE (MOBILE) === */
+@media (max-width: 576px) {
+  .hero {
+    text-align: center;
+    padding: 3rem 1rem;
+  }
+
+  .navbar-brand div small {
+    display: block;
+  }
+}
+/* === WinterTech Hero Section === */
+.hero {
+  background: linear-gradient(120deg, #3b82f6, #6d28d9, #9333ea);
+  background-size: 300% 300%;
+  animation: heroGradient 8s ease infinite;
+  color: #fff;
+  padding: 6rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Smooth moving gradient background */
+@keyframes heroGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Title glow animation */
+/* === WinterTech Hero Section === */
+.hero {
+  background: linear-gradient(120deg, #3b82f6, #6d28d9, #9333ea);
+  background-size: 300% 300%;
+  animation: heroGradient 8s ease infinite;
+  color: #fff;
+  padding: 6rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* === WinterTech Title Animation === */
+.hero h1 {
+  font-weight: 900;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #00e0ff, #8b5cf6, #ec4899, #00e0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 300%;
+  animation: gradientFlow 6s linear infinite, waveText 2.5s ease-in-out infinite;
+  position: relative;
+}
+
+/* moving gradient color */
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* gentle wave movement */
+@keyframes waveText {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* glowing underline */
+.hero h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #00e0ff, #8b5cf6, #ec4899, #00e0ff);
+  background-size: 300%;
+  animation: gradientFlow 6s linear infinite;
+  border-radius: 3px;
+  box-shadow: 0 0 20px rgba(139,92,246,0.7);
+}
+
+
+/* Description text */
+.hero p.lead {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  animation: fadeSlideUp 1s ease forwards;
+}
+
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Button styling */
+.hero .btn-primary-custom {
+  background: linear-gradient(135deg, #4f46e5, #8b5cf6);
+  border: none;
+  color: white;
+  border-radius: 50px;
+  padding: 0.8rem 1.8rem;
+  font-weight: 600;
+  box-shadow: 0 0 10px rgba(139,92,246,0.4);
+  transition: all 0.3s ease;
+}
+
+.hero .btn-primary-custom:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px rgba(139,92,246,0.8);
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+}
+
+/* Outline button hover (Explore Events) */
+.hero .btn-outline-secondary {
+  color: #fff;
+  border-color: rgba(255,255,255,0.5);
+  transition: all 0.3s ease;
+}
+
+.hero .btn-outline-secondary:hover {
+  background: rgba(255,255,255,0.2);
+  border-color: #fff;
+}
+
+/* Image hover animation */
+.hero img {
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.hero img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(139,92,246,0.5);
+}
+
+/* Hero Image Animation */
+.hero-img {
+  transition: transform 1.2s ease, filter 1.2s ease, box-shadow 1.2s ease;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* Floating zoom + slight rotate + glow on hover */
+.hero-img:hover {
+  transform: scale(1.05) rotate(-1.5deg) translateY(-8px);
+  filter: brightness(1.1);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+}
+
+/* Optional: gentle floating animation without hover */
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.hero-img.animate {
+  animation: float 6s ease-in-out infinite;
+}

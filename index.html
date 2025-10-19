@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BCA Wintertech fest 2k25 — Where Creativity Meets Code</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- AOS for simple scroll animations -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+ <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    :root{
+      --accent:#4f46e5; /* indigo */
+      --muted:#6b7280;
+    }
+
+    body{font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;}
+    .hero{background:linear-gradient(180deg, rgba(79,70,229,0.08), rgba(99,102,241,0.03)); padding:4rem 0}
+    .badge-accent{background:var(--accent); color:#fff}
+    .event-card:hover{transform:translateY(-6px); box-shadow:0 8px 22px rgba(16,24,40,0.08); transition:all .22s}
+    .team-photo{width:120px; height:120px; object-fit:cover; border-radius:12px}
+    .schedule-table td, .schedule-table th{vertical-align:middle}
+    footer{background:#0f172a; color:#cbd5e1; padding:2rem 0}
+    .btn-primary-custom{background:var(--accent); border:0}
+
+    /* responsive tweaks */
+    @media (max-width:576px){
+      .hero{padding:2rem 0}
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+      <div class="badge badge-accent p-2 rounded">BCA</div>
+      <div class="hero-title">
+  <div class="main-title">WINTERTECH FESTIVAL 2K25</div>
+  <small class="subtitle">Where Creativity Meets Code</small>
+</div>
+
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+        <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
+        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item ms-2"><a class="btn btn-primary btn-primary-custom" href="#registerModal" data-bs-toggle="modal">Register Now</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-7" data-aos="fade-up">
+        <h1 class="display-6 fw-bold">BCA WINTERTECH FESTIVAL 2K25</h1>
+        <p class="lead text-muted">5–7 Days of competitions, workshops & creative showcases. Build, learn, and compete — from web dev to video editing.</p>
+
+        <div class="d-flex gap-2 mt-3">
+          <a class="btn btn-lg btn-primary btn-primary-custom" href="#registerModal" data-bs-toggle="modal">Register Now</a>
+          <a class="btn btn-outline-secondary btn-lg" href="#events">Explore Events</a>
+        </div>
+
+        <div class="mt-4">
+          <small class="text-muted">📍 Hosted by BCA Department • 📅 December 2025 (Exact dates by college schedule)</small>
+        </div>
+      </div>
+
+      <!-- Hero Image HTML -->
+<div class="col-lg-5 text-center">
+  <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=800&auto=format&fit=crop"
+       alt="Hero Image"
+       class="img-fluid rounded-3 shadow-sm hero-img" id="heroImage">
+</div>
+
+
+</body>
+
+
+    </div>
+  </div>
+</header>
+
+<!-- EVENTS -->
+<section id="events" class="py-5">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="h4">Technical & Creative Events</h2>
+      <small class="text-muted">Click any event to register</small>
+    </div>
+
+    <div class="row gy-4">
+      <!-- Website Development -->
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="50">
+        <div class="card p-3 event-card h-100">
+          <div class="d-flex justify-content-between align-items-start">
+            <h5 class="mb-1">Web Craft Challenge</h5>
+            <span class="badge bg-secondary">Technical</span>
+          </div>
+          <p class="text-muted small">Build a responsive website (College/School/Hotel/E-commerce/Portfolio). Time: 3 days.</p>
+          <ul class="small text-muted">
+            <li>Judging: Design, Creativity, Functionality</li>
+            <li>Teams: Solo / Team</li>
+          </ul>
+          <div class="mt-auto pt-3 d-flex gap-2">
+            <a class="btn btn-sm btn-outline-primary" href="#detailsWeb" data-bs-toggle="modal">Details</a>
+            <a class="btn btn-sm btn-primary btn-primary-custom" href="#registerModal" data-bs-toggle="modal">Register</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coding Challenge -->
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card p-3 event-card h-100">
+          <div class="d-flex justify-content-between align-items-start">
+            <h5 class="mb-1">Code Craft Cup</h5>
+            <span class="badge bg-secondary">Technical</span>
+          </div>
+          <p class="text-muted small">Solo coding contest in C. Round 1: MCQ (60 mins). Judging: Accuracy + Time.</p>
+          <ul class="small text-muted">
+            <li>Difficulty: Medium</li>
+            <li>Time Limit: 60 mins</li>
+          </ul>
+          <div class="mt-auto pt-3 d-flex gap-2">
+            <a class="btn btn-sm btn-outline-primary" href="#detailsCode" data-bs-toggle="modal">Details</a>
+            <a class="btn btn-sm btn-primary btn-primary-custom" href="#registerModal" data-bs-toggle="modal">Register</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Paper Presentation -->
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
+        <div class="card p-3 event-card h-100">
+          <div class="d-flex justify-content-between align-items-start">
+            <h5 class="mb-1">Paper Podium</h5>
+            <span class="badge bg-secondary">Technical</span>
+          </div>
+          <p class="text-muted small">Topic: Website Spoofing. 7 slides. 7 mins + 10 mins Q&A.</p>
+          <div class="mt-auto pt-3 d-flex gap-2">
+            <a class="btn btn-sm btn-outline-primary" href="#detailsPaper" data-bs-toggle="modal">Details</a>
+            <a class="btn btn-sm btn-primary btn-primary-custom" href="#registerModal" data-bs-toggle="modal">Register</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tech Quiz -->
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card p-3 event-card h-100">
+          <div class="d-flex justify-content-between align-items-start">
+            <h5 class="mb-1">Quiz Quest</h5>
+            <span class="badge bg-secondary">Technical</span>
+          </div>
+          <p class="text-muted small">50 questions, 60 mins. Topics: Networking, Current Affairs, Basics.</p>
+          <div class="mt-auto pt-3 d-flex gap-2">
+            <a class="btn btn-sm btn-outline-primary" href="#detailsQuiz" data-bs-toggle="modal">Details</a>
+            <a class="btn btn-sm btn-primary btn-primary-custom" href="#registerModal" data-bs-toggle="modal">Register</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bug Bounty -->
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
+        <div class="card p-3 event-card h-100">
+          <div class="d-flex justify-content-between align-items-start">
+            <h5 class="mb-1">Bug Bounty</h5>
+            <span class="badge bg-secondary">Technical</span>
+          </div>
+          <p class="text-muted small">Debug/solve problems in C/C++/HTML/CSS/JS/Java. Time: 60 mins.</p>
+          <div class="mt-auto pt-3 d-flex gap-2">
+            <a class="btn btn-sm btn-outline-primary" href="#detailsBug" data-bs-toggle="modal">Details</a>
+            <a class="btn btn-sm btn-primary btn-primary-custom" href="#registerModal" data-bs-toggle="modal">Register</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Creative Events: Video Editing -->
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="card p-3 event-card h-100">
+          <div class="d-flex justify-content-between align-items-start">
+            <h5 class="mb-1">Reels Studio</h5>
+            <span class="badge bg-info text-dark">Creative</span>
+          </div>
+          <p class="text-muted small">Short video (1–3 mins). Tools: CapCut / Premiere / VN. Time: 120 mins.</p>
+          <div class="mt-auto pt-3 d-flex gap-2">
+            <a class="btn btn-sm btn-outline-primary" href="#detailsVideo" data-bs-toggle="modal">Details</a>
+            <a class="btn btn-sm btn-primary btn-primary-custom" href="#registerModal" data-bs-toggle="modal">Register</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Drawing -->
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="350">
+        <div class="card p-3 event-card h-100">
+          <div class="d-flex justify-content-between align-items-start">
+            <h5 class="mb-1">Art Station</h5>
+            <span class="badge bg-info text-dark">Creative</span>
+          </div>
+          <p class="text-muted small">Sketch your favourite person. 1 hour. Paper or Digital.</p>
+          <div class="mt-auto pt-3 d-flex gap-2">
+            <a class="btn btn-sm btn-outline-primary" href="#detailsArt" data-bs-toggle="modal">Details</a>
+            <a class="btn btn-sm btn-primary btn-primary-custom" href="#registerModal" data-bs-toggle="modal">Register</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dance -->
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+        <div class="card p-3 event-card h-100">
+          <div class="d-flex justify-content-between align-items-start">
+            <h5 class="mb-1">Feel The Rhythm</h5>
+            <span class="badge bg-info text-dark">Creative</span>
+          </div>
+          <p class="text-muted small">Solo / Group. Time Limit: 5 mins. Judging: Expression & Synchronization.</p>
+          <div class="mt-auto pt-3 d-flex gap-2">
+            <a class="btn btn-sm btn-outline-primary" href="#detailsDance" data-bs-toggle="modal">Details</a>
+            <a class="btn btn-sm btn-primary btn-primary-custom" href="#registerModal" data-bs-toggle="modal">Register</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Song -->
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="450">
+        <div class="card p-3 event-card h-100">
+          <div class="d-flex justify-content-between align-items-start">
+            <h5 class="mb-1">Stage Storm</h5>
+            <span class="badge bg-info text-dark">Creative</span>
+          </div>
+          <p class="text-muted small">Solo / Group. Time: 2–3 mins. Judging: Vocals & Lyrics.</p>
+          <div class="mt-auto pt-3 d-flex gap-2">
+            <a class="btn btn-sm btn-outline-primary" href="#detailsSong" data-bs-toggle="modal">Details</a>
+            <a class="btn btn-sm btn-primary btn-primary-custom" href="#registerModal" data-bs-toggle="modal">Register</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Gaming Events Section -->
+<section class="py-5 bg-dark text-light" id="gaming">
+  <div class="container">
+    <h2 class="section-title text-white">🎮 3️⃣ GAMING EVENT</h2>
+    <div class="row g-4">
+      <div class="col-md-6 mx-auto" data-aos="zoom-in">
+        <div class="card bg-secondary text-light h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title">🔫 Free Fire Tournament – Battle Blaze</h5>
+            <p>
+              Mode: Squad (4 Players)<br>
+              Platform: Mobile<br>
+              Format: Knockout → Semi-Final → Final<br>
+              Judging: Winners Only<br>
+              Entry Fee: ₹___ (to be decided)
+            </p>
+            <button class="btn btn-light mt-3" data-bs-toggle="modal" data-bs-target="#registerModal">
+              Register Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- SCHEDULE -->
+<section id="schedule" class="py-5 bg-light">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="h5">Tentative Schedule</h2>
+      <small class="text-muted">Adjust days based on college timetable</small>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table schedule-table align-middle">
+        <thead class="table-white">
+          <tr>
+            <th>Day</th>
+            <th>Morning</th>
+            <th>Afternoon</th>
+            <th>Evening</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Day 1</strong><br><small class="text-muted">Inauguration</small></td>
+            <td>Workshops / Registration</td>
+            <td>Website Dev - Day 1</td>
+            <td>Tech Quiz (Prelims)</td>
+          </tr>
+          <tr>
+            <td><strong>Day 2</strong><br><small class="text-muted">Competitions</small></td>
+            <td>Coding Challenge - Round 1</td>
+            <td>Paper Presentations</td>
+            <td>Video Editing Final</td>
+          </tr>
+          <tr>
+            <td><strong>Day 3</strong><br><small class="text-muted">Finals</small></td>
+            <td>Bug Bounty / Finals</td>
+            <td>Website Submissions Review</td>
+            <td>Prize Distribution & Closing</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team" class="py-5">
+  <div class="container">
+    <div class="mb-4">
+      <h2 class="h5">Organizers</h2>
+      <p class="text-muted small">Meet the student coordinators and faculty in charge.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- example member -->
+      <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up">
+        <div class="card p-3 text-center h-100">
+          <img src="images\aswini1.jpg" alt="Organizer" class="team-photo mx-auto mb-3">
+          <h6 class="mb-0"> Mr.Aswin swain </h6>
+          <small class="text-muted">Faculty In-charge</small>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="80">
+        <div class="card p-3 text-center h-100">
+          <img src="images\group.jpg" alt="Organizer" class="team-photo mx-auto mb-3">
+          <h6 class="mb-0">Surya pradhan ,Sameer sahu </h6>
+          <small class="text-muted">Srikant s. ,Rohan d.</small>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="160">
+        <div class="card p-3 text-center h-100">
+          <img src="https://images.unsplash.com/photo-1545996124-0b3a1b8d9a1f?q=80&w=800&auto=format&fit=crop&s=placeholder" alt="Organizer" class="team-photo mx-auto mb-3">
+          <h6 class="mb-0">Ms.Bidusmita Swain</h6>
+          <small class="text-muted"> Girls Coordinator</small>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="240">
+        <div class="card p-3 text-center h-100">
+          <img src="https://images.unsplash.com/photo-1545996124-0b3a1b8d9a1f?q=80&w=800&auto=format&fit=crop&s=placeholder" alt="Organizer" class="team-photo mx-auto mb-3">
+          <h6 class="mb-0">Rohan Patra</h6>
+          <small class="text-muted">Media & Publicity</small>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="py-5 bg-light">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="h5">Gallery</h2>
+      <small class="text-muted">Photos & videos of past events</small>
+    </div>
+
+    <div id="carouselGallery" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner rounded-3 shadow-sm">
+        <div class="carousel-item active">
+          <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=1400&auto=format&fit=crop&s=placeholder" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1400&auto=format&fit=crop&s=placeholder" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1400&auto=format&fit=crop&s=placeholder" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselGallery" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselGallery" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-5">
+  <div class="container">
+    <div class="row gy-4 align-items-start">
+      <div class="col-lg-6" data-aos="fade-right">
+        <h3 class="h5">Get In Touch</h3>
+        <p class="text-muted small">Questions about events, sponsorship, or volunteering? Reach out.</p>
+
+        <ul class="list-unstyled small text-muted">
+          <li><strong>Gmail:</strong> bca.wintertech2k25@gmail.com</li>
+          <li><strong>Phone:</strong> +91 6372071027 ,+91 999813638</li>
+          <li><strong>Location:</strong> Science College(auto),Hinjilicut</li>
+        </ul>
+
+        <div class="mt-3">
+          <a class="btn btn-outline-secondary btn-sm" href="#">Follow on Instagram</a>
+          <a class="btn btn-outline-secondary btn-sm" href="#">Facebook</a>
+        </div>
+      </div>
+
+      <div class="col-lg-6" data-aos="fade-left">
+        <h3 class="h6">Map / Venue</h3>
+        <div class="ratio ratio-16x9 rounded-3 overflow-hidden shadow-sm">
+          <!-- Replace src with your Google Maps embed URL -->
+          <iframe src="https://maps.app.goo.gl/oGwQkm11bEfiPDrw8" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REGISTER MODAL (Google Form embed placeholder) -->
+<div class="modal fade" id="registerModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Register for BCA WinterTech 2k25</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p class="small text-muted">We recommend using a Google Form to collect registrations. Paste your form's embed link below in the <code>src</code> attribute to activate automatic registration.</p>
+
+        <!-- DEFAULT: example form placeholder (replace with your Google Form embed URL) -->
+        <div class="ratio ratio-4x3">
+          <iframe id="gform" src="https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_EMBED_URL/viewform?embedded=true" frameborder="0">Loading…</iframe>
+        </div>
+
+        <hr>
+        <h6 class="mt-3">Quick Manual Register</h6>
+        <form id="quickRegister">
+          <div class="row g-2">
+            <div class="col-md-6">
+              <input class="form-control" placeholder="Full Name" required id="r_name">
+            </div>
+            <div class="col-md-6">
+              <input class="form-control" placeholder="Email" required id="r_email" type="email">
+            </div>
+            <div class="col-md-6">
+              <input class="form-control" placeholder="Phone" required id="r_phone" type="tel">
+            </div>
+            <div class="col-md-6">
+              <select class="form-select" id="r_event">
+                <option value="">Select Event</option>
+                <option>Web Craft Challenge</option>
+                <option>Code Craft Cup</option>
+                <option>Paper Podium</option>
+                <option>Quiz Quest</option>
+                <option>Bug Bounty</option>
+                <option>Reels Studio</option>
+                <option>Art Station</option>
+                <option>Feel The Rhythm</option>
+                <option>Stage Storm</option>
+              </select>
+            </div>
+          </div>
+          <div class="mt-3 d-flex justify-content-end">
+            <button class="btn btn-secondary me-2" type="reset">Reset</button>
+            <button class="btn btn-primary btn-primary-custom" type="submit">Submit</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SIMPLE DETAILS MODAL (reused) -->
+<div class="modal fade" id="detailsWeb" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h6 class="modal-title">Web Craft — Details</h6><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p class="small text-muted">Time: 3 days. Submit zipped folder or GitHub link. Judging: Design, Responsiveness, Functionality.</p></div></div></div></div>
+<div class="modal fade" id="detailsCode" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h6 class="modal-title">Code Craft — Details</h6><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p class="small text-muted">Language: C. Round 1: MCQ. Final round: code problems. Bring your own laptop.</p></div></div></div></div>
+<div class="modal fade" id="detailsPaper" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h6 class="modal-title">Paper Podium — Details</h6><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p class="small text-muted">Topic: Website Spoofing. Slides: Max 7. Time: 7 mins + 10 mins Q&A.</p></div></div></div></div>
+<div class="modal fade" id="detailsQuiz" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h6 class="modal-title">Quiz Quest — Details</h6><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p class="small text-muted">50 questions, 60 mins. Topics: Networking, Current Affairs, Basics.</p></div></div></div></div>
+<div class="modal fade" id="detailsBug" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h6 class="modal-title">Bug Bounty — Details</h6><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p class="small text-muted">Debug challenge. Languages: multiple. Time: 60 mins. Provide corrected code + explanation.</p></div></div></div></div>
+<div class="modal fade" id="detailsVideo" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h6 class="modal-title">Reels Studio — Details</h6><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p class="small text-muted">Short video 1–3 mins. Tools allowed: CapCut, Premiere, VN. Time: 120 mins.</p></div></div></div></div>
+<div class="modal fade" id="detailsArt" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h6 class="modal-title">Art Station — Details</h6><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p class="small text-muted">Sketch your favourite person. 1 hour. Physical or digital media accepted.</p></div></div></div></div>
+<div class="modal fade" id="detailsDance" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h6 class="modal-title">Feel The Rhythm — Details</h6><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p class="small text-muted">Solo/Group. Time limit 5 mins. Ensure playlist cleared of explicit content.</p></div></div></div></div>
+<div class="modal fade" id="detailsSong" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h6 class="modal-title">Stage Storm — Details</h6><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p class="small text-muted">Solo/Group. Time 2–3 mins. Bring backing track if needed.</p></div></div></div></div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <strong>BCA WinterTech 2k25</strong>
+        <div class="small text-muted">Where Creativity Meets Code • Organized by BCA Department</div>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <small>© 2025 BCA Department. All rights reserved.</small>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({duration:700, once:true});
+
+  // Quick Register handler (example: sends to Google Sheet via Apps Script or just shows an alert)
+  document.getElementById('quickRegister').addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('r_name').value.trim();
+    const email = document.getElementById('r_email').value.trim();
+    const phone = document.getElementById('r_phone').value.trim();
+    const event = document.getElementById('r_event').value;
+    if(!name || !email || !phone || !event){
+      alert('Please fill all fields.');
+      return;
+    }
+    // For production: POST this data to your server or Google Apps Script URL which writes to sheet.
+    alert('Thanks '+name+" — your registration for: "+event+" has been received. (This is a demo alert.)");
+    const modal = bootstrap.Modal.getInstance(document.getElementById('registerModal'));
+    modal.hide();
+    this.reset();
+  });
+
+  // Replace placeholder Google Form iframe src via JS if you want to dynamically set it
+</script>
+</body>
+</html>
